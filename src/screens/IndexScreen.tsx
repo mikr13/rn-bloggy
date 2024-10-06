@@ -5,6 +5,7 @@ import type { StackNavigation } from "@/types/routes";
 import { showToast } from "@/util/toast";
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
+import { useEffect } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 
@@ -46,6 +47,12 @@ export const IndexScreen = () => {
     showToast("info", "Blog deleted successfully", undefined, true, 2000);
     refetch();
   }
+
+  useEffect(() => {
+    navigation.addListener('focus', () => {
+      refetch();
+    });
+  })
 
   return (
     <View style={styles.container}>
