@@ -1,5 +1,5 @@
 import { ReactQueryProvider } from "@/providers/react-query";
-import { CreateScreen } from "@/screens/CreateScreen";
+import { CreateOrEditScreen } from "@/screens/CreateOrEditScreen";
 import { DetailScreen } from "@/screens/DetailScreen";
 import { IndexScreen } from "@/screens/IndexScreen";
 import { RootStackParamList } from "@/types/routes";
@@ -18,7 +18,7 @@ export default function App() {
         }}>
           <Stack.Screen name="Index" component={IndexScreen} />
           <Stack.Screen name="Detail" component={DetailScreen} />
-          <Stack.Screen name="Create" component={CreateScreen} />
+          <Stack.Screen name="CreateOrEdit" component={CreateOrEditScreen} />
         </Stack.Navigator>
       </ReactQueryProvider>
     </NavigationContainer>

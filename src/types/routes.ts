@@ -4,7 +4,7 @@ import type { StackScreenProps } from '@react-navigation/stack';
 export type RootStackParamList = {
   Index: {};
   Detail: { id: string };
-  Create: { id?: string };
+  CreateOrEdit: { id?: string };
 };
 
 export type StackNavigation = NavigationProp<RootStackParamList>;

@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { z } from 'zod';
 
 const styles = StyleSheet.create({
@@ -53,7 +53,7 @@ type Props = {
   }
 }
 
-export const CreateScreen = ({ route }: Props) => {
+export const CreateOrEditScreen = ({ route }: Props) => {
   const navigation = useNavigation<StackNavigation>();
   const addBlog = useStore((state) => state.addBlog);
   const editBlog = useStore((state) => state.editBlog);
@@ -89,7 +89,7 @@ export const CreateScreen = ({ route }: Props) => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header
         title="Create Blog"
         headerRight={{
@@ -173,6 +173,6 @@ export const CreateScreen = ({ route }: Props) => {
           navigation.navigate('Index', {});
         })} title="Save" />
       </View>
-    </View>
+    </ScrollView>
   );
 };

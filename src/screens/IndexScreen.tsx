@@ -51,7 +51,7 @@ export const IndexScreen = () => {
         title="Blogs"
         headerRight={{
           icon: <Feather name="plus" />,
-          onPress: () => navigation.navigate('Create', {})
+          onPress: () => navigation.navigate('CreateOrEdit', {})
         }}
       />
       <FlatList keyExtractor={(blog) => blog.id} data={blogs} renderItem={({ item }) => (

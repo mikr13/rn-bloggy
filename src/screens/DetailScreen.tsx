@@ -3,7 +3,7 @@ import { useStore } from "@/store";
 import type { StackNavigation } from "@/types/routes";
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text } from "react-native";
 
 type Props = {
   route: {
@@ -38,18 +38,18 @@ export const DetailScreen = ({ route }: Props) => {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header
         title={blog.title}
         headerRight={{
           icon: <Feather name="edit-2" />,
-          onPress: () => navigation.navigate('Create', {
+          onPress: () => navigation.navigate('CreateOrEdit', {
             id: blog.id,
           })
         }}
       />
       <Image source={{ uri: blog.imageURL }} style={styles.image} />
       <Text style={styles.content}>{blog.content}</Text>
-    </View>
+    </ScrollView>
   );
 };
