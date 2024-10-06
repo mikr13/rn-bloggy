@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "db": "json-server db.json --port 3000",
+    "tunnel": "NGROK_DOMAIN=$NGROK_DOMAIN ngrok http --domain $NGROK_DOMAIN 3000"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "ngrok": "^5.0.0-beta.2"
+  }
+}
