@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
-import { useStore } from "@/store";
+import { useDeleteBlog } from "@/hooks/useDeleteBlog";
+import { useGetBlogs } from "@/hooks/useGetBlogs";
 import type { StackNavigation } from "@/types/routes";
 import { showToast } from "@/util/toast";
 import { Feather } from '@expo/vector-icons';
@@ -37,12 +38,13 @@ const styles = StyleSheet.create({
 
 export const IndexScreen = () => {
   const navigation = useNavigation<StackNavigation>();
-  const blogs = useStore((state) => state.blogs);
-  const deleteBlog = useStore((state) => state.deleteBlog);
+  const { data, isLoading, refetch } = useGetBlogs();
+  const { mutate: deleteBlog } = useDeleteBlog();
 
   const handleDelete = (id: string) => {
     deleteBlog(id);
     showToast("info", "Blog deleted successfully", undefined, true, 2000);
+    refetch();
   }
 
   return (
@@ -54,7 +56,7 @@ export const IndexScreen = () => {
           onPress: () => navigation.navigate('CreateOrEdit', {})
         }}
       />
-      <FlatList keyExtractor={(blog) => blog.id} data={blogs} renderItem={({ item }) => (
+      {data && data?.length > 0 ? <FlatList keyExtractor={(blog) => blog.id} data={data} renderItem={({ item }) => (
         <TouchableOpacity onPress={() => navigation.navigate('Detail', {
           id: item.id
         })} style={styles.card}>
@@ -63,7 +65,7 @@ export const IndexScreen = () => {
             <Feather name="trash" style={styles.iconStyle} />
           </TouchableOpacity>
         </TouchableOpacity>
-      )} />
+      )} /> : isLoading ? (<Text>Loading...</Text>) : (<Text>Add blogs first!</Text>)}
     </View>
   )
 };

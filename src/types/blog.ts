@@ -5,3 +5,5 @@ export type Blog = {
   content: string;
   imageURL: string;
 }
+
+export type Blogs = Blog[];

@@ -1,3 +1,16 @@
 {
-  "blogs": []
+  "blogs": [
+    {
+      "id": "211995c4-b99f-44e4-9803-79c77bec4f6a",
+      "title": "Something new fresh",
+      "content": "Lorem ipsum dolor sit amet dolore minim ullamco,. Fugiat amet enim consectetur do amet velit commodo deserunt amet esse. Eiusmod reprehenderit dolore officia, proident sunt fugiat id labore occaecat nulla. Sit cupidatat ex officia consectetur exercitation esse duis laborum voluptate et dolor do et, commodo sint cupidatat quis commodo mollit.\n\nReprehenderit adipisicing labore non enim exercitation officia nisi eiusmod dolore eu laboris nostrud Lorem nulla ex velit adipisicing mollit labore excepteur. Sit ut enim velit nisi in cillum velit anim sint culpa aute. Velit amet ea, ut mollit ea eu magna ullamco pariatur. Ad elit pariatur laboris nostrud sit aliquip veniam eiusmod ea culpa duis consectetur in ullamco nisi in duis ullamco adipisicing cupidatat. Velit, proident cupidatat ut in aute cillum dolor.\n\nCommodo sint dolor laboris excepteur ad fugiat est cillum dolore occaecat officia eiusmod. Deserunt adipisicing laborum labore quis laboris est aute. Velit nisi mollit eu enim laboris ex laborum aliquip magna voluptate culpa deserunt consequat reprehenderit velit. Et aute deserunt ea mollit anim magna duis laborum nostrud enim amet ipsum consequat nisi excepteur laborum minim laboris Lorem quis. Quis exercitation consequat id laborum nulla culpa cillum et mollit culpa et do occaecat in deserunt sit. Aute consectetur Lorem mollit occaecat qui tempor. Pariatur commodo in velit nostrud excepteur et duis id pariatur.\n",
+      "imageURL": "https://picsum.photos/500/300"
+    },
+    {
+      "title": "Exquisite title 1",
+      "content": "Lorem ipsum dolor sit amet dolore minim ullamco,. Fugiat amet enim consectetur do amet velit commodo deserunt amet esse. Eiusmod reprehenderit dolore officia, proident sunt fugiat id labore occaecat nulla. Sit cupidatat ex officia consectetur exercitation esse duis laborum voluptate et dolor do et, commodo sint cupidatat quis commodo mollit.\n\nReprehenderit adipisicing labore non enim exercitation officia nisi eiusmod dolore eu laboris nostrud Lorem nulla ex velit adipisicing mollit labore excepteur. Sit ut enim velit nisi in cillum velit anim sint culpa aute. Velit amet ea, ut mollit ea eu magna ullamco pariatur. Ad elit pariatur laboris nostrud sit aliquip veniam eiusmod ea culpa duis consectetur in ullamco nisi in duis ullamco adipisicing cupidatat. Velit, proident cupidatat ut in aute cillum dolor.\n\nCommodo sint dolor laboris excepteur ad fugiat est cillum dolore occaecat officia eiusmod. Deserunt adipisicing laborum labore quis laboris est aute. Velit nisi mollit eu enim laboris ex laborum aliquip magna voluptate culpa deserunt consequat reprehenderit velit. Et aute deserunt ea mollit anim magna duis laborum nostrud enim amet ipsum consequat nisi excepteur laborum minim laboris Lorem quis. Quis exercitation consequat id laborum nulla culpa cillum et mollit culpa et do occaecat in deserunt sit. Aute consectetur Lorem mollit occaecat qui tempor. Pariatur commodo in velit nostrud excepteur et duis id pariatur.",
+      "imageURL": "https://picsum.photos/500/300",
+      "id": "6beb9f57-127b-4cfb-a2f8-b2f3d7d21cca"
+    }
+  ]
 }

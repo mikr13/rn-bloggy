@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { useStore } from "@/store";
 import type { StackNavigation } from "@/types/routes";
+import { truncate } from "@/util/string";
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
 import { Image, ScrollView, StyleSheet, Text } from "react-native";
@@ -40,7 +41,7 @@ export const DetailScreen = ({ route }: Props) => {
   return (
     <ScrollView style={styles.container}>
       <Header
-        title={blog.title}
+        title={truncate(blog.title, 20)}
         headerRight={{
           icon: <Feather name="edit-2" />,
           onPress: () => navigation.navigate('CreateOrEdit', {

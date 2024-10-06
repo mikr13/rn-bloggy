@@ -4,13 +4,13 @@ import { useErrorNotification } from './useErrorNotification';
 import { useLoading } from './useLoading';
 
 type Props = {
-  isLoading: boolean;
+  isLoading?: boolean;
   isError: boolean;
   error: CustomError | null;
   errorMessage: string;
 }
 
-export const useDataFetching = ({ isLoading, isError, error, errorMessage }: Props) => {
+export const useDataFetching = ({ isLoading = false, isError, error, errorMessage }: Props) => {
   const { setIsLoading } = useStore();
   useErrorNotification(isError, errorMessage, error);
   useLoading(isLoading, setIsLoading);

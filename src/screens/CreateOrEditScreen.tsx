@@ -1,4 +1,6 @@
 import { Header } from "@/components/Header";
+import { useAddBlog } from "@/hooks/useAddBlog";
+import { useEditBlog } from "@/hooks/useEditBlog";
 import { useStore } from "@/store";
 import type { Blog } from "@/types/blog";
 import type { StackNavigation } from "@/types/routes";
@@ -55,13 +57,13 @@ type Props = {
 
 export const CreateOrEditScreen = ({ route }: Props) => {
   const navigation = useNavigation<StackNavigation>();
-  const addBlog = useStore((state) => state.addBlog);
-  const editBlog = useStore((state) => state.editBlog);
   const blogs = useStore((state) => state.blogs);
   const blog = blogs.find((b) => b.id === route.params?.id);
-  const { register, handleSubmit, setValue, formState: { errors }, control } = useForm<Omit<Blog, "id">>({
+  const { handleSubmit, setValue, formState: { errors }, control } = useForm<Omit<Blog, "id">>({
     resolver: zodResolver(schema),
   });
+  const { mutate: addBlog } = useAddBlog();
+  const { mutate: editBlog } = useEditBlog();
   const [isEdit, setIsEdit] = useState<boolean>(false);
   const [focusedInput, setFocusedInput] = useState<string | null>(null);
 
