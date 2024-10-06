@@ -49,12 +49,12 @@ export const IndexScreen = () => {
   }
 
   useEffect(() => {
-    const listener = navigation.addListener('focus', () => {
+    const unsubscribe = navigation.addListener('focus', () => {
       refetch();
     });
 
     return () => {
-      listener();
+      unsubscribe();
     }
   })
 
