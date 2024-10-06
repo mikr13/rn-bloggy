@@ -1,7 +1,7 @@
 import type { CustomError } from '@/types/error';
 import Toast, { type ToastType } from 'react-native-toast-message';
 
-export const showToast = (type: ToastType, summary: string, detail: string, autoHide = true, visibilityTime: number = 5000) => {
+export const showToast = (type: ToastType, summary: string, detail?: string, autoHide = true, visibilityTime: number = 5000) => {
   Toast.show({
     type,
     text1: summary,
