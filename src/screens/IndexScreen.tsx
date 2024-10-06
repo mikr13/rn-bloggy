@@ -49,9 +49,13 @@ export const IndexScreen = () => {
   }
 
   useEffect(() => {
-    navigation.addListener('focus', () => {
+    const listener = navigation.addListener('focus', () => {
       refetch();
     });
+
+    return () => {
+      listener();
+    }
   })
 
   return (
