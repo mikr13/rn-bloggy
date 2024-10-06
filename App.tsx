@@ -26,20 +26,20 @@ export default function App() {
             component={IndexScreen}
             options={({ navigation }) => ({
               headerRight: () => (
-                <TouchableOpacity onPress={() => navigation.navigate("Create")}>
+                <TouchableOpacity onPress={() => navigation.navigate("CreateOrEdit")}>
                   <Feather name="plus" size={30} />
                 </TouchableOpacity>
               ),
             })}
           />
           <Stack.Screen
-            name="Show"
-            component={ShowScreen}
+            name="Detail"
+            component={DetailScreen}
             options={({ route, navigation }) => ({
               headerRight: () => (
                 <TouchableOpacity
                   onPress={() =>
-                    navigation.navigate("Edit", { id: route.params.id })
+                    navigation.navigate("CreateOrEdit", { id: route.params.id })
                   }
                 >
                   <EvilIcons name="pencil" size={35} />
@@ -47,8 +47,7 @@ export default function App() {
               ),
             })}
           />
-          <Stack.Screen name="Create" component={CreateScreen} />
-          <Stack.Screen name="Edit" component={EditScreen} />
+          <Stack.Screen name="CreateOrEdit" component={CreateOrEditScreen} />
         </Stack.Navigator> */}
       </ReactQueryProvider>
     </NavigationContainer>
